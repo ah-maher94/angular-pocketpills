@@ -7,3 +7,6 @@ body{
     background-color: #4e657a !important;
     overflow-x: hidden ; 
   }
+  .logoutBtn{
+    cursor: pointer;
+  }

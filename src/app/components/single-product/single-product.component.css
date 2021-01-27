@@ -1,4 +1,8 @@
 
+.productName{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .ajax_add_to_cart_button {
     float: left;
     margin-right: 7px;
