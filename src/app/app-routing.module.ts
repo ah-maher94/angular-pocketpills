@@ -26,6 +26,7 @@ import { ProductSearchComponent } from './components/product-search/product-sear
 
 const routes: Routes = [
   { path: '', component: HomepageComponent},
+  { path: '/', component: HomepageComponent},
   { path: 'home', component: HomepageComponent},
   { path: 'about', component: AboutUsComponent},
   { path: 'contact', component: ContactUsComponent},
