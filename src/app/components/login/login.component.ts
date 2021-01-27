@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
             this.setAdmin.changeAdmin(0);
             this.setSuperAdmin.changeSuperAdmin(0)
 
-            this.router.navigate(['categories']);
+            this.router.navigate(['home']);
           }else if(data['details']['userRole']==="superAdmin"){
               this.setAdmin.changeAdmin(0);
               this.setUser.changeUser(0);
