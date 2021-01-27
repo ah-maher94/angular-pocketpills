@@ -22,7 +22,7 @@ export class SuperDashboardComponent implements OnInit {
       this.router.navigate(['login']);
     }
     async ngOnInit(): Promise<void> {
-      this.authService.authUser();
+      this.authService.authSuperAdmin();
       try {
       
      await this.http.get("https://pocket-pills.herokuapp.com/api/getBranchinfo").subscribe(res=>{

@@ -53,6 +53,20 @@ export class AuthServiceService {
     }
   }
 
+  authSuperAdmin(){
+    if(localStorage.getItem('currentUser')){
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if(this.currentUser[0]['userRole'] == "admin"){
+        this.router.navigate(['dashboard']);
+      }
+      if(this.currentUser[0]['userRole'] == "user"){
+        this.router.navigate(['home']);
+      }
+    }else{
+      this.router.navigate(['categories']);
+    }
+  }
+
   getUser(){
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     this.id= this.currentUser[0]['userId']
