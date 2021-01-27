@@ -19,7 +19,7 @@ export class HomepageComponent implements OnInit {
     private http: HttpClient,private setCategory: DataService) { }
 
   async ngOnInit(): Promise<void> {
-    this.authService.authAdmin();
+    // this.authService.authAdmin();
     try {
       await this.http.get("https://pocket-pills.herokuapp.com/api/category")
       .subscribe(res =>{
