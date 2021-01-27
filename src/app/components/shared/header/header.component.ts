@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   searchProduct(){
+    window.location.reload();
     this.router.navigate(['products/search'], {
       queryParams:{'searchTerm': this.searchValue}
     })

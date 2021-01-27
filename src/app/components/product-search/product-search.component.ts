@@ -44,7 +44,7 @@ export class ProductSearchComponent implements OnInit {
       }
       this.productService.searchProduct(this.searchFor).subscribe((data) => {
         console.log(data);
-        window.location.reload();
+        // window.location.reload();
         this.productList = data;
         for (let index = 0; index < this.productList.length; index++) {
           this.clicked.push(0);
