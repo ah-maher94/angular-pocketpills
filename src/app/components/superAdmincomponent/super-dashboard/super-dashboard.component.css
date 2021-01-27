@@ -24,3 +24,6 @@ body{
   .decline{
     margin-left: 10px;
   }
+  .dashboard-continer{
+    min-height: 725px;
+  }
