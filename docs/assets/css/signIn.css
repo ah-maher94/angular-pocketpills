@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.loading {
+    margin: 0 auto;
+    width: 8em;
+    font: bolder 2.3em 'Open Sans', sans-serif;
+    color: white;
+}
+
+.loading div {
+    margin: 0;
+    display: inline-block;
+    animation: load 2s infinite alternate;
+}
+
+@keyframes load {
+    5% {
+        opacity: 0.3;
+        color: #00e1ff;
+    }
+    100% {
+        color: rgb(26, 0, 170);
+        text-shadow: 1.4px 2px 2.4px rgb(4, 0, 255), 5px 5px 5px #929292;
+    }
+}
+
+div:nth-child(2) {
+    animation-delay: .25s;
+}
+
+div:nth-child(3) {
+    animation-delay: .50s;
+}
+
+div:nth-child(4) {
+    animation-delay: .75s;
+}
+
+div:nth-child(5) {
+    animation-delay: 1s;
+}
+
+div:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+div:nth-child(7) {
+    animation-delay: 1.50s;
+}
+
+/* container */
+
+.container {
+    padding: 50px;
+}
+
+/* login */
+
+body {
+    background-color: #F3EBF6;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    background-color: #FFFFFF;
+    width: 500px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.main .sign {
+    padding-top: 48px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.main .un {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+    padding-bottom: 101px;
+}
+
+.main .pass {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* .un:focus, .pass:focus {
+    border: 2px solid rgba(19, 226, 47, .3) !important;
+    box-shadow: 2px 2px 5px #00FF00;
+} */
+
+.main .radiomain {
+    background-color: #fff;
+    margin-left: 10% !important;
+    padding-top: 0px;
+    padding-bottom: 0;
+}
+
+.main .radiomain input {
+    margin-left: -6% !important;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 36px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.main .submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff !important;
+    /* background: linear-gradient(to right, #910404, #c32d2d, #f04a33); */
+    /* background: linear-gradient(to right, #040691, #2f7bd9, #3633f0); */
+    /* opacity: .8; */
+    border: 2px solid #000;
+    color: #000 !important;
+    padding-left: 53px;
+    padding-right: 45px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: ui-serif;
+    margin-left: 34%;
+    font-size: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: 2s;
+    transition-property: padding-left, padding-right, margin-left;
+}
+
+.main .submit:hover {
+    background: linear-gradient(to right, #040691, #2f7bd9, #3633f0);
+    /* opacity: .8; */
+    border: none;
+    color: #fff!important;
+    /* padding-left: 300px; */
+    /* padding-right: 150px; */
+    /* margin-left: 15%; */
+    opacity: 1;
+}
+
+.main .forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    margin: 4% 0% 2% 8%;
+}
+
+.main a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    text-decoration: none
+}
+
+.main .forgot a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #000 !important;
+    padding-top: 18px;
+    margin-left: -6%;
+}
+
+.main .forgot a:hover {
+    color: #ccc !important;
+}
+
+.main .signlink a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #000 !important;
+    padding-top: 16px;
+    margin-left: 2%;
+}
+
+.main .signlink a:hover {
+    color: #ccc !important;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
+
+.main .loginul {
+    margin: 10px 0px 27px 201px;
+}
+
+.main input {
+    margin-left: 12% !important;
+}

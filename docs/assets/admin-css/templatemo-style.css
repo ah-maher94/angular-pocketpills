@@ -1,0 +1,707 @@
+/*
+
+Product Admin CSS Template
+
+https://templatemo.com/tm-524-product-admin
+
+*/
+
+.admin-pharmacy{
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: #4e657a;
+  overflow-x: hidden;
+}
+.admin-pharmacy a {
+  transition: all 0.3s ease;
+}
+.admin-pharmacy a:focus,
+.admin-pharmacy a:hover {
+  text-decoration: none;
+}
+.admin-pharmacy button:focus {
+  outline: 0;
+}
+.admin-pharmacy .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.admin-pharmacy .tm-site-icon {
+  color: #656565;
+}
+.admin-pharmacy .tm-site-title {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.admin-pharmacy .navbar {
+  height: 100px;
+  background-color: #567086;
+  padding: 0;
+}
+.admin-pharmacy .navbar .container {
+  position: relative;
+}
+.admin-pharmacy.tm-logout-icon {
+  font-size: 1.5em;
+}
+.admin-pharmacy .tm-mt-big {
+  margin-top: 57px;
+}
+.admin-pharmacy .tm-mb-big {
+  margin-bottom: 60px;
+}
+.admin-pharmacy .tm-mt-small {
+  margin-top: 20px;
+}
+.admin-pharmacy .tm-block-col {
+  margin-bottom: 30px;
+}
+.admin-pharmacy .tm-block {
+  padding: 40px;
+  -webkit-box-shadow: 1px 1px 5px 0 #455c71;
+  -moz-box-shadow: 1px 1px 5px 0 #455c71;
+  box-shadow: 1px 1px 5px 0 #455c71;
+  min-height: 350px;
+  height: 100%;
+  max-height: 450px;
+}
+.admin-pharmacy .tm-block-avatar,
+.admin-pharmacy .tm-block-settings {
+  max-height: none;
+}
+.admin-pharmacy .tm-block-avatar {
+  height: auto;
+}
+.admin-pharmacy .tm-block-h-auto {
+  min-height: 1px;
+  max-height: none;
+  height: auto;
+}
+.admin-pharmacy .tm-block-scroll {
+  overflow-y: scroll;
+}
+.admin-pharmacy .tm-block-overflow {
+  overflow: hidden;
+}
+.admin-pharmacy .tm-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.admin-pharmacy .nav-link {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 90%;
+}
+.admin-pharmacy .nav-link > i {
+  margin-bottom: 10px;
+  margin-right: 0;
+  font-size: 1.5rem;
+}
+.admin-pharmacy .dropdown-item,
+.admin-pharmacy .nav-link {
+  padding: 15px 20px;
+}
+.admin-pharmacy .dropdown-menu {
+  font-size: 90%;
+  color: #fff;
+  background-color: #567086;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: auto;
+}
+.admin-pharmacy .dropdown-item {
+  color: #fff;
+  padding: 15px 30px;
+}
+.admin-pharmacy .navbar-nav .active > .nav-link,
+.admin-pharmacy .navbar-nav .nav-link.active {
+  background-color: #f5a623;
+  color: #fff;
+}
+.admin-pharmacy .navbar-nav .nav-link.active i {
+  color: #fff;
+}
+.admin-pharmacy .dropdown-item:focus,
+.admin-pharmacy.dropdown-item:hover {
+  background-color: #567086;
+}
+.admin-pharmacy .navbar-nav a:hover,
+.admin-pharmacy .navbar-nav a:hover i {
+  color: #f5a623;
+}
+.admin-pharmacy .nav-item {
+  text-align: center;
+}
+.admin-pharmacy .nav-item:last-child {
+  margin-right: 0;
+}
+.admin-pharmacy .dropdown-toggle::after {
+  display: none;
+}
+.admin-pharmacy .dropdown-menu {
+  margin-top: 0;
+  border: 0;
+}
+.admin-pharmacy .tm-content-row {
+  justify-content: space-between;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.admin-pharmacy .tm-col {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+.admin-pharmacy .tm-col-big {
+  width: 39%;
+}
+.admin-pharmacy .tm-col-small {
+  width: 21.95%;
+}
+.admin-pharmacy .tm-gray-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #aaa;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.admin-pharmacy .tm-notification-items {
+  overflow-y: scroll;
+  height: 90%;
+}
+.admin-pharmacy .tm-notification-item {
+  padding: 15px;
+  background-color: #4e657a;
+  color: #fff;
+  font-size: 95%;
+  margin-bottom: 15px;
+}
+.admin-pharmacy .tm-notification-item:last-child {
+  margin-bottom: 0;
+}
+.admin-pharmacy .tm-notification-link {
+  color: #f5a623;
+}
+.admin-pharmacy .tm-text-color-secondary {
+  color: #bdcbd8;
+}
+.admin-pharmacy .tm-small {
+  font-size: 90%;
+}
+.admin-pharmacy .table {
+  background-color: #50697f;
+  color: #fff;
+  font-size: 85%;
+  margin-bottom: 0;
+}
+.admin-pharmacy thead {
+  background-color: #486177;
+  color: #fff;
+}
+.admin-pharmacy .table thead th {
+  border-bottom: 0;
+}
+.admin-pharmacy .tm-status-circle {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+.admin-pharmacy .moving {
+  background-color: #9be64d;
+  box-shadow: 0 0 8px #9be64d, inset 0 0 8px #9be64d;
+}
+.admin-pharmacy .pending {
+  background-color: #efc54b;
+  box-shadow: 0 0 8px #efc54b, inset 0 0 8px #efc54b;
+}
+.admin-pharmacy .cancelled {
+  background-color: #da534f;
+  box-shadow: 0 0 8px #da534f, inset 0 0 8px #da534f;
+}
+.admin-pharmacy .tm-avatar {
+  width: 345px;
+}
+.admin-pharmacy .tm-avatar-container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.admin-pharmacy .tm-avatar-delete-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  z-index: 1000;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: rgba(57, 78, 100, 0.7);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: none;
+  transition: all 0.2s ease;
+}
+.admin-pharmacy .tm-avatar-container:hover .tm-avatar-delete-link {
+  display: block;
+}
+.admin-pharmacy .tm-col-avatar {
+  max-width: 425px;
+  width: 37%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.admin-pharmacy .tm-col-account-settings {
+  max-width: 822px;
+  width: 63%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.admin-pharmacy .admin-pharmacy .form-control {
+  background-color: #54657d;
+  color: #fff;
+  border: 0;
+}
+.admin-pharmacy .admin-pharmacy .form-control:focus {
+  background-color: #60738e;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
+}
+.admin-pharmacy .form-group label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.admin-pharmacy .tm-hide-sm {
+  display: block;
+}
+.admin-pharmacy .tm-list-group {
+  counter-reset: myOrderedListItemsCounter;
+  padding-left: 0;
+}
+.admin-pharmacy .tm-list-group > li {
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px;
+}
+.admin-pharmacy .tm-list-group > li:hover {
+  color: #0266c4;
+}
+.admin-pharmacy .tm-list-group > li:before {
+  counter-increment: myOrderedListItemsCounter;
+  content: counter(myOrderedListItemsCounter) ".";
+  margin-right: 0.5em;
+}
+.admin-pharmacy .tm-list {
+  padding-left: 30px;
+}
+.admin-pharmacy .tm-list > li {
+  margin-bottom: 20px;
+}
+.admin-pharmacy .admin-pharmacy .form-control {
+  padding: 19px 18px;
+  border-radius: 0;
+  height: 50px;
+}
+.admin-pharmacy .form-group {
+  margin-bottom: 15px;
+}
+.admin-pharmacy .btn {
+  border-radius: 0;
+  padding: 13px 28px;
+  transition: all 0.2s ease;
+  max-width: 100%;
+}
+.admin-pharmacy .btn-small {
+  padding: 10px 24px;
+}
+.admin-pharmacy .btn-primary {
+  color: #fff;
+  background-color: #f5a623;
+  border: 2px solid #f5a623;
+  font-size: 90%;
+  font-weight: 600;
+}
+.admin-pharmacy .btn-primary:active,
+.admin-pharmacy .btn-primary:hover {
+  color: #f5a623;
+  background-color: transparent;
+  border: 2px solid #f5a623;
+}
+.admin-pharmacy .custom-file-input {
+  cursor: pointer;
+}
+.admin-pharmacy .custom-file-label {
+  border-radius: 0;
+}
+.admin-pharmacy .table td,
+.admin-pharmacy .table th {
+  border-top: 1px solid #415a70;
+  padding: 15px 25px;
+  vertical-align: middle;
+}
+.admin-pharmacy .tm-table-small td,
+.admin-pharmacy .tm-table-small th {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.admin-pharmacy .table-hover tbody tr {
+  transition: all 0.2s ease;
+}
+.admin-pharmacy .table-hover tbody tr:hover {
+  color: #a0c0de;
+}
+.admin-pharmacy .tm-bg-primary-dark {
+  background-color: #435c70;
+}
+.admin-pharmacy .tm-bg-gray {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.admin-pharmacy .tm-table-mt {
+  margin-top: 66px;
+}
+.admin-pharmacy .page-item:first-child .page-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.admin-pharmacy .page-item:last-child .page-link {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.admin-pharmacy .page-link {
+  padding: 12px 18px;
+}
+.admin-pharmacy .page-link,
+.admin-pharmacy .page-link:hover {
+  color: #000;
+}
+.admin-pharmacy .page-item {
+  margin-right: 18px;
+}
+.admin-pharmacy .page-item:last-child {
+  margin-right: 0;
+}
+.admin-pharmacy .page-item.active .page-link {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  color: #000;
+}
+.admin-pharmacy input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #394e64;
+  background-position: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  box-sizing: content-box;
+  width: 24px;
+  height: 24px;
+  transition: all 0.1s linear;
+}
+.admin-pharmacy input[type="checkbox"]:checked {
+  /* background: url(src/assets/img/check-mark.png) #394e64 center no-repeat; */
+}
+.admin-pharmacy input[type="checkbox"]:focus {
+  outline: 0 none;
+  box-shadow: none;
+}
+.admin-pharmacy .tm-block-products {
+  min-height: 725px;
+}
+.admin-pharmacy .tm-block-product-categories {
+  min-height: 650px;
+}
+.admin-pharmacy .tm-product-table-container {
+  max-height: 465px;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+}
+.admin-pharmacy.tm-product-table tr {
+  font-weight: 600;
+}
+.admin-pharmacy .tm-product-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.admin-pharmacy .tm-product-delete-icon {
+  font-size: 1.1rem;
+  color: #fff;
+}
+.admin-pharmacy .tm-product-delete-link {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #394e64;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.admin-pharmacy .tm-product-delete-link:hover .tm-product-delete-icon {
+  color: #6d8ca6;
+}
+.admin-pharmacy .custom-select {
+  width: 100%;
+  border: none;
+  color: #acc6de;
+  height: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  padding: 15px;
+  /* background: url(src/assets/img/arrow-down.png) 98% no-repeat #50657b; */
+}
+.admin-pharmacy .custom-select:focus {
+  outline: 0;
+}
+.admin-pharmacy .tm-trash-icon {
+  color: #6e6c6c;
+  cursor: pointer;
+}
+.admin-pharmacy .tm-trash-icon:hover {
+  color: #9f1321;
+}
+.admin-pharmacy .tm-footer {
+  background-color: #567086;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
+  -moz-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
+  box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
+}
+.admin-pharmacy .custom-select {
+  height: 50px;
+  border-radius: 0;
+}
+.admin-pharmacy .tm-product-img-dummy {
+  max-width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #aaa;
+}
+.admin-pharmacy .tm-product-img-edit {
+  max-width: 100%;
+  position: relative;
+}
+.admin-pharmacy .tm-product-img-edit i {
+  display: none;
+  position: absolute;
+}
+.admin-pharmacy .tm-product-img-edit:hover i {
+  display: block;
+}
+.admin-pharmacy .tm-upload-icon {
+  background: #455c71;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 22px;
+}
+.admin-pharmacy .tm-login-col {
+  max-width: 470px;
+}
+.admin-pharmacy .navbar-toggler {
+  border-color: #708da8;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 2px;
+  border-radius: 0;
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+}
+.admin-pharmacy .navbar-toggler:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+.admin-pharmacy .tm-nav-icon {
+  color: #fff;
+}
+.admin-pharmacy .navbar-toggler:hover .tm-nav-icon {
+  color: #f5a623;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #394f62;
+}
+::-webkit-scrollbar-thumb {
+  background: #6d8da6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ab5d6;
+}
+
+.admin-pharmacy .tm-footer-link {
+  color: white;
+}
+
+.admin-pharmacy .tm-footer-link:hover,
+.admin-pharmacy .tm-footer-link:focus {
+  color: #aacbea;
+}
+
+@media (min-width: 1200px) {
+  .admin-pharmacy .navbar-expand-xl .navbar-nav .nav-link {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .admin-pharmacy .navbar-collapse {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .admin-pharmacy .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 1275px) and (min-width: 1200px) {
+  .admin-pharmacy .nav-item {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1350px) {
+  .admin-pharmacy .nav-item {
+    margin-right: 1px;
+  }
+}
+@media (max-width: 1199px) {
+  .admin-pharmacy .tm-col-big,
+  .admin-pharmacy .tm-col-small {
+    width: 49.65%;
+  }
+  .admin-pharmacy .navbar-collapse {
+    padding: 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 1px;
+    position: absolute;
+    top: 72px;
+    right: 20px;
+    width: 200px;
+    z-index: 1000;
+  }
+  .admin-pharmacy .dropdown-menu {
+    text-align: center;
+  }
+  .admin-pharmacy .nav-link {
+    color: #fff;
+    background-color: #567086;
+    padding: 15px;
+    flex-direction: row;
+  }
+  .admin-pharmacy .nav-link > i {
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  .admin-pharmacy .nav-item {
+    margin-right: 0;
+  }
+  .admin-pharmacy .tm-block-taller {
+    max-height: 520px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .admin-pharmacy .navbar-expand-xl > .container,
+  .admin-pharmacy .navbar-expand-xl > .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .admin-pharmacy .navbar-collapse {
+    right: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .admin-pharmacy .tm-col-big,
+  .admin-pharmacy .tm-col-small {
+    width: 100%;
+    min-height: 383px;
+    height: auto;
+  }
+  .admin-pharmacy .tm-block {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .admin-pharmacy .tm-col-account-settings,
+  .admin-pharmacy .tm-col-avatar {
+    width: 100%;
+    max-width: 100%;
+  }
+  .admin-pharmacy .tm-block-avatar {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-pharmacy .tm-avatar {
+    align-self: center;
+  }
+  .admin-pharmacy .tm-hide-sm {
+    display: none;
+  }
+}
+@media (max-width: 633px) {
+  .admin-pharmacy .page-item {
+    margin-top: 10px;
+  }
+  .admin-pharmacy .custom-select {
+    background-position: 96%;
+  }
+}
+@media (max-width: 574px) {
+  .admin-pharmacy .navbar-collapse {
+    top: 47px;
+  }
+  .admin-pharmacy .navbar {
+    height: 50px;
+  }
+  .admin-pharmacy .tm-site-title {
+    font-size: 1.4rem;
+    margin-left: 7px;
+  }
+  .admin-pharmacy .tm-site-icon {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .admin-pharmacy .tm-mt-big {
+    margin-top: 45px;
+  }
+  .admin-pharmacy .tm-mb-big {
+    margin-bottom: 45px;
+  }
+  .admin-pharmacy #barChart,
+  .admin-pharmacy #lineChart {
+    max-height: 350px;
+  }
+}
