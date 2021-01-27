@@ -20,7 +20,7 @@ export class PharmaciesComponent implements OnInit {
     private http: HttpClient) { }
 
   async ngOnInit(): Promise<void> {
-    this.authService.authAdmin();
+    // this.authService.authAdmin();
     try {
       await this.http.get("https://pocket-pills.herokuapp.com/api/pharmacy")
       .subscribe(res =>{

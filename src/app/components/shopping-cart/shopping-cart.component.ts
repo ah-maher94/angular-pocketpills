@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -15,9 +16,11 @@ export class ShoppingCartComponent implements OnInit {
   cartProducts: any =[];
   cartProductLength: any = 0;
   constructor(private productService: ProductsService, private http: HttpClient,
-    private router: Router) { }
+    private router: Router,
+    private authService: AuthServiceService) { }
 
   ngOnInit(): void {
+    this.authService.authAdmin();
     this.productService.getUserCartProducts().subscribe((data)=>{
       console.log(data);
       this.cartProducts = data;

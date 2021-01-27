@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.authService.authAdmin();
+    // this.authService.authAdmin();
     this.diplayedProduct.currentMessage.subscribe(result => {
       this.product = result;
       
