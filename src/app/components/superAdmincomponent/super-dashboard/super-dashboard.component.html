@@ -1,0 +1,76 @@
+
+   <app-super-admin-nav></app-super-admin-nav>
+   
+
+
+<div class="admin-pharmacy">
+  <div class="container">
+
+    <div *ngIf="allRequestsLength != 0;">
+    <div class="row tm-content-row" *ngFor="let request of allRequests">
+      <div class="col-12 tm-block-col">
+        <div class="table-wrapper-sticky my-5">
+          <h2 class="tm-block-title"><span class="badge badge-warning span-inline">{{request['userName']}}</span> requests to add 
+            <span class="badge badge-warning span-inline">{{request['pharmacyName']}}</span> as a new pharmacy
+          <span class="btn-success btn-sm mt-1 mb-5 accept action-cursor" (click)="accept(request.notificationId)">
+            Accept
+          </span>
+          <span class="btn-danger btn-sm mt-1 mb-5 decline action-cursor" (click)="decline(request.notificationId)">
+            Decline
+          </span>
+        
+          <span class="btn-danger btn-sm mt-1 mb-5 contact action-cursor" (click)="toggleContact()">
+            contact
+          </span>
+          <span class="btn-sm mt-1 mb-5" *ngIf="contactInfo">
+            {{request['userPhone']}}
+          </span>
+          
+        </h2>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+    <div class="row tm-content-row">
+      <div class="col-12 tm-block-col">
+        <div
+          class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll"
+        >
+          <h2 class="tm-block-title">Pharmacies</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">pharmacy Name</th>
+                <th scope="col">pharmacy Country</th>
+                <th scope="col">pharmacy City</th>
+                <th scope="col">pharmacy Street</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <th scope="row">
+                  <b>{{ order.pharmacyName }}</b>
+                </th>
+                <td>
+                  <b>{{ order.branchCountry }}</b>
+                </td>
+                <td>
+                  <b>{{ order.branchCity }}</b>
+                </td>
+                <td>
+                  <b>{{ order.branchStreet }}</b>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-admin-footer></app-admin-footer>
+

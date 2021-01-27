@@ -1,0 +1,102 @@
+<app-header></app-header>
+<!-- Start Categories -->
+<div class="container">
+
+  <div class="row mt-20 section-title text-center">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-uppercase mt-0 line-height-1">All Categories</h2>
+          <div class="title-icon">
+            <img class="mb-10" src="assets/images/title-icon.png" alt="">
+          </div>
+          <p class="">
+            This section shows all categories form all pharmacies<br>like mom care ,medicine and another categories</p>
+        </div>
+      </div>
+    </div>
+    <div class="row carousel__container">
+      <div class="col-md-3 col-sm-4"*ngFor="let category of categorys">
+        <div class="carousel--item">
+          <img
+            class="carousel--item__img"
+            [src]="category['categoryImage']"
+            alt="item"
+          />
+          <div class="carousel--item__details">
+            <p class="carousel--item__details--title">{{category['categoryName']}}</p>
+            <p class="carousel--item__details--title">Browse Products<a [routerLink]="['/products']"><i class="fa fa-arrow-circle-right fa-2x" style="margin-left:5px" aria-hidden="true" (click)='product($event)' [value]='category["categoryName"]'>
+            </i></a></p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- End Categories -->
+
+<!-- Section: Call To Action -->
+<section  class="divider parallax layer-overlay overlay-theme-colored2-9 CallToAction" style="background-image: url('assets/images/banners/home-call.jpg');">
+  <div class="container pt-20 pb-20">
+    <div class="call-to-action">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <h2 class="text-theme-colored"><i class="pe-7s-call text-theme-colored"></i><a class="text-theme-colored" href="#"> (+0102) &ndash; 442 7564</a></h2>
+          <h2 class="text-white">Please feel free to contact us for emergency case.</h2>
+          <p class="text-white">Together for better health</p>
+          <a routerLink="/contact" class="btn btn-theme-colored mt-20">Contact With Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="mb-20">Popular Categories</h4>
+        <div class="owl-carousel" id="categories-popular" data-nav="true">
+          <div
+            class="col-md-3 col-sm-4"
+            *ngFor="let category of categorys; let i = index"
+          >
+            <div *ngIf="i < 4">
+              <div class="carousel--item">
+                <img
+                  class="carousel--item__img"
+                  [src]="category['categoryImage']"
+                  alt="item"
+                />
+                <div class="carousel--item__details">
+                  <p class="carousel--item__details--title">
+                    {{ category["categoryName"] }}
+                  </p>
+                  <p class="carousel--item__details--title">
+                    Browse Products<a [routerLink]="['/products']"
+                      ><i
+                        class="fa fa-arrow-circle-right fa-2x"
+                        style="margin-left: 5px"
+                        aria-hidden="true"
+                        (click)="product($event)"
+                        [value]="category['categoryName']"
+                      >
+                      </i
+                    ></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="item"><img src="assets/images/categories/nivea.png" alt=""></div>
+          <div class="item"><img src="assets/images/categories/ListerineMouthwash.png" alt=""></div>
+          <div class="item"><img src="assets/images/categories/dettole2.png" alt=""></div>
+          <div class="item"><img src="assets/images/categories/nivea.png" alt=""></div>
+          <div class="item"><img src="assets/images/categories/ListerineMouthwash.png" alt=""></div>
+        --></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

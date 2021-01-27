@@ -1,0 +1,145 @@
+<!-- Header -->
+<header id="header" class="header">
+  <div class="header-top bg-theme-colored sm-text-center">
+    <div class="container">
+      <div class="row mt-10">
+        <div class="col-md-8">
+          <div class="widget text-white">
+            <i class="fa fa-clock-o text-white"></i> Opening Hours: 24 Hours
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="widget">
+            <ul class="list-inline text-right flip sm-text-center">
+
+              <li *ngIf="loginUser() == null; else loggedUser">
+                <a [routerLink]="['/login']">
+                  <i class="fa fa-user-circle icons-head" aria-hidden="true" title="login"></i>
+                </a>
+              </li>
+              
+              <ng-template #loggedUser>
+                <li>
+                  <a [routerLink]="['/shopping-cart']">
+                    <i class="fa fa-shopping-cart fa-3x icons-head" aria-hidden="true" title="your card">
+                    </i>
+                  </a>
+                </li>
+                <li class="text-white">|</li>
+                <li>
+                  <a [routerLink]="['/orders']">
+                    <i class="fa fa-user-circle icons-head" aria-hidden="true" title="profile"></i>
+                  </a>
+                </li>
+                <li>
+                  <a (click)="logout()">
+                    <i class="fa fa-sign-out icons-head" aria-hidden="true" title="logout"></i>
+                  </a>
+                </li>
+              </ng-template>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-middle p-0 bg-lighter xs-text-center">
+    <div class="container pb-15 pt-15">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3">
+          <a class="menuzord-brand pull-left flip sm-pull-center" href="/"><img src="assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+            <i
+              class="fa fa-envelope text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+            <a href="#" class="font-12 text-gray text-uppercase">Mail Us Today</a>
+            <h5 class="font-13 text-black m-0"> pocketPills@gmail.com</h5>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+            <i
+              class="fa fa-phone-square text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+            <a href="#" class="font-12 text-gray text-uppercase">Call us for more details</a>
+            <h5 class="font-13 text-black m-0"> +(012) 345 6789</h5>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+            <i
+              class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+            <a href="#" class="font-12 text-gray text-uppercase"> Location</a>
+            <h5 class="font-13 text-black m-0"> ITI Monofia Branch</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Start Menu -->
+  <div class="container navbar-container ">
+    <nav>
+      <ul class="mcd-menu">
+        <li>
+          <a href="/" class="active">
+            <i class="fa fa-home"></i>
+            <strong>Home</strong>
+            <small>Home Page</small>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/categories']">
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+            <strong>Categories</strong>
+            <small>All Categories</small>
+          </a>
+          <ul>
+            <li><a href="../../categories"><i class="fa fa-globe"></i>Make Up</a></li>
+            <li><a href="../../categories"><i class="fa fa-globe"></i>Medicine</a></li>
+            <li><a href="../../categories"><i class="fa fa-globe"></i>Perfumes</a></li>
+            <li><a href="../../categories"><i class="fa fa-globe"></i>Personal Care</a></li>
+            <li><a href="../../categories"><i class="fa fa-globe"></i>Skin Care</a></li>
+            <li><a href="../../categories"><i class="fa fa-certificate"></i>Mom &amp; Baby</a></li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/pharmacies']">
+            <i class="fa fa-medkit" aria-hidden="true"></i>
+            <strong>Pharmacies</strong>
+            <small>All Pharmacies</small>
+          </a>
+         
+        </li>
+        <li>
+          <a [routerLink]="['/about']">
+            <i class="fa fa-edit"></i>
+            <strong>About us</strong>
+            <small>about us</small>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']">
+            <i class="fa fa-comments-o"></i>
+            <strong>Contact Us</strong>
+            <small>keep in touch</small>
+          </a>
+        </li>
+        <li class="float">
+          <a class="search">
+            <input type="text" [(ngModel)]="searchValue">
+            <button (click)="searchProduct()"><i class="fa fa-search"></i></button>
+         </a>
+          <a href="" class="search-mobile">
+            <i class="fa fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End Menu -->
+</header>

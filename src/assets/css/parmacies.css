@@ -1,0 +1,40 @@
+.product{
+    transition: all .5s ease-in;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgb(231, 231, 235);
+}
+
+.product img{
+    /* border: 1px solid rgb(180, 177, 177); */
+    border-radius: 20px 20px 0 0;
+}
+
+.product:hover{
+    transform: scale(1.1);
+}
+.product ul a:hover{
+    color:rgb(18, 153, 215) !important;
+}
+
+.pharmacies ul li a{
+    transition: all .5 ease-in;
+}
+.pharmacies ul li a:hover {
+    color:rgb(18, 153, 215);
+    transform: scale(1.5);
+}
+
+.sidebar .input{
+    background-color: white !important;
+}
+.sidebar button{
+    background-color:#1196cc ;
+}
+
+.numberList li a:hover{
+    background-color:#1196cc ;
+    color: white;
+}
+.main-content{
+    background-color: rgba(221, 224, 230, 0.2);
+}

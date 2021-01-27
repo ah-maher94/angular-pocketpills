@@ -1,0 +1,146 @@
+
+<app-header></app-header>
+
+    <div class="bottom">
+        <div class="white_bottom">
+            <div class="left_side"><input class="mouseP" type="text" />
+                <div class="top_sq"></div>
+                <div class="bottom_sq"></div>
+                <div class="shoe">
+                    <div class="left_btn">❰</div>
+                    <div class="shoe_img"><img class="imgR" src="{{productInfo[0]['productImage']}}" />
+                        <!-- <img class="imgW" src="images/product1checkout.png" /> -->
+                    </div>
+                    <div class="right_btn">❱</div>
+                </div>
+                <div class="switch">
+                    <div class="switch1 th_shoe"></div>
+                    <div class="switch2"></div>
+                </div>
+                <div class="icon">
+                    <div class="back"><svg viewbox="0 2 50 50">
+                            <circle cx="25.906" cy="27.496" r="19.121"></circle>
+                            <polyline points="24.5,34.157 17.053,27.341 24.5,20.525 "></polyline>
+                            <line x1="17.053" y1="27.341" x2="35.237" y2="27.468"></line>
+                        </svg></div>
+                    <!-- <div class="cart" id="cartIcon"><svg viewbox="0 0 50 50">
+                            <path d="M22.822,28.96"></path>
+                            <polyline points="15.289,18.241 17.591,18.528 21.689,30 30.228,30 32.208,22.262 18.891,22.325 "></polyline>
+                            <circle class="w" cx="28.472" cy="32.31" r="0.996"></circle>
+                            <circle class="w" cx="23.257" cy="32.31" r="0.996"></circle>
+                            <circle cx="24.804" cy="25.496" r="19.121"></circle>
+                        </svg>
+                        <div class="RTnumber"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="right_side">
+                <div class="info">
+                    <div class="sname"><div class="name">{{productInfo[0]['productName']}}</div>
+                    </div>
+                    <div class="price">{{productInfo[0]['productPrice']}} EGP</div>
+                </div>
+                <div class="deco"> </div>
+                <div class="detail">
+                    <div class="qua">
+                        <div class="text">
+                            <!-- <div class="word">Quantity</div> -->
+                            <!-- <div class="count">1</div> -->
+                        </div>
+
+                        <!-- <button
+                        *ngIf="getQuantity(111) === 0 || getQuantity(111) === null; else updateQuantity"
+                        (click)="addToCart(product)"
+                        class="button ajax_add_to_cart_button btn-block text-center"
+                      >
+                        <span>Add to cart</span>
+                      </button>
+
+                        <ng-template #updateQuantity>
+                            <div class="row no-gutters cart-quantity">
+                              <div class="col-2">
+                                <button
+                                  (click)="removeFromCart(product)"
+                                  class="btn btn-secondary btn-block"
+                                >
+                                  -
+                                </button>
+                              </div>
+                              <div class="col text-center">
+                                {{ getQuantity(product.id) }} in cart
+                              </div>
+                              <div class="col-2">
+                                <button
+                                  (click)="addToCart(product)"
+                                  class="btn btn-secondary btn-block"
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </div>
+                          </ng-template> -->
+
+
+
+
+
+<!-- 
+                        <div class="counter">
+                            <div class="sub">-</div>
+                            <div class="num">1</div>
+                            <div class="add">+</div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="color">
+                        <div class="text">
+                            <div class="word">Direction:&nbsp </div>
+                            <div class="this_color"></div>
+                        </div>
+                        <div class="color_group">
+                            <div class="c1">Right</div>
+                            <div class="c2">Left</div>
+                        </div>
+                    </div> -->
+                    <div class="size">
+                        <!-- <div class="text">
+                            <div class="this_size">Contain:&nbsp</div>
+                            <div class="size_num"></div>
+                        </div> -->
+                        <ul >
+                           <p style="margin: 56px 0px 10px;">{{productInfo[0]['productdescription']}}</p>
+                        </ul>
+                    </div>
+
+        </div>
+        <div class="cart_bottom">
+            <div class="cart_list">
+                <div class="close_btn">✖</div>
+                <div class="title">
+                    <div class="cart_icon"> <svg viewbox="0 0 50 50">
+                            <path d="M22.822,28.96"></path>
+                            <polyline points="15.289,18.241 17.591,18.528 21.689,30 30.228,30 32.208,22.262 18.891,22.325 "></polyline>
+                            <circle class="w" cx="28.472" cy="32.31" r="0.996"></circle>
+                            <circle class="w" cx="23.257" cy="32.31" r="0.996"></circle>
+                        </svg></div>
+                    <h2>Your Cart</h2>
+                </div>
+                <div class="list">
+                    <div class="cart_cat">
+                        <div class="desT">Description</div>
+                        <div class="colorT">Direction</div>
+                        <div class="QTYT">QTY</div>
+                        <div class="priceT">Price</div>
+                    </div>
+                    <ul></ul>
+                </div>
+                <div class="total">
+                    <div class="totalT">Total:</div>
+                    <div class="totalP">EGP 200</div>
+                </div>
+			   <div class="checkout"><button class="cancel">Cancel</button><button>Checkout</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <app-footer></app-footer>

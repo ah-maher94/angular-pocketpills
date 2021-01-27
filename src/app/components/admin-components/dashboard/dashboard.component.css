@@ -1,0 +1,20 @@
+body{
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: #4e657a;
+  overflow-x: hidden; 
+}
+
+.listStatus{
+  color:black;
+}
+
+.action-cursor{
+  margin-right:5px;
+  cursor: pointer;
+  padding: 5px;
+  width: 40%;
+}
+
+.dashboard-continer{
+  min-height: 725px;
+}

@@ -1,0 +1,74 @@
+<app-nav></app-nav>
+<div class="admin-pharmacy">
+  <div class="container mt-5">
+    <div class="row tm-content-row">
+      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-products">
+          <div class="tm-product-table-container">
+            <table class="table table-hover tm-table-small tm-product-table">
+              <thead>
+                <tr>
+                  <!-- <th scope="col">&nbsp;</th> -->
+                  <th scope="col">NAME</th>
+                  <th scope="col">Salary</th>
+                  <th scope="col">department</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let employee of employees; index as i">
+                  <td id="{{ i }}" class="catchRow" (click)="myFunction($event)">
+                    {{ employee.staffName }}
+                  </td>
+                  <td id="{{ i }}" class="catchRow" (click)="myFunction($event)">
+                    {{ employee.salary }}
+                  </td>
+                  <td id="{{ i }}" class="catchRow" (click)="myFunction($event)">
+                    {{ employee.staffDepartment }}
+                  </td>
+                  <td>{{ employee.staffEmail }}</td>
+                  <td>
+                    <a class="tm-product-delete-link" id="deleteEmployee" (click)="deleteEmployee(employee.staffId)">
+                      <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                    </a>
+                    <!-- <a class="tm-product-delete-link" id="editEmployee" (click)="editEmployee(employee.staffId,value)">
+                      <i class="far fa-edit tm-product-delete-icon"></i>
+                    </a> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- table container -->
+          <a routerLink="/add-employer" class="btn btn-primary btn-block text-uppercase mb-3">Add new Employer</a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-product-categories">
+          <h2 class="tm-block-title">departments</h2>
+          <div class="tm-product-table-container">
+            <table class="table tm-table-small tm-product-table">
+              <tbody>
+                <tr *ngFor="let department of departments">
+                  <td class="tm-product-name">
+                    {{ department.departmentName }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- table container -->
+          <a routerLink="/add-department">
+            <button class="btn btn-primary btn-block text-uppercase mb-3 add-new-department">
+              Add new department
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-admin-footer></app-admin-footer>
+

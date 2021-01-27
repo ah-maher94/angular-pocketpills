@@ -1,0 +1,52 @@
+<app-nav></app-nav>
+<div class="admin-pharmacy">
+    <div class="container">
+        <div class="row tm-content-row">
+        
+            
+       
+            <div class="col-12 tm-block-col">
+                <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll dashboard-continer">
+                    <h2 class="tm-block-title">Orders</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Invoise NO.</th>
+                                <th scope="col">Invoise Date</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Product Quantity</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let order of adminOrders">
+                                <th scope="row"><b>{{order.invNo}}</b></th>
+                                <td><b>{{order.invDate}}</b></td>
+                                <td><b>{{order.invStatus}}</b></td>
+                                <td><b>{{order.productQuantity}}</b></td>
+                                <td><b>{{order.productName}}</b></td>
+                                <td><b>{{order.productPrice*order.productQuantity}}</b></td>
+                                <td class="text-center">
+                                    <div *ngIf="order.invStatus == 'Processing'">
+                                    <span class="btn-success btn-sm mt-1 mb-5 decline action-cursor" (click)="updateStatus(order.invDetailsId)">
+                                        Delivered
+                                      </span>
+                                      <span class="btn-danger btn-sm mt-1 mb-5 decline action-cursor" (click)="deleteInvoice(order.invDetailsId)">
+                                        Cancel
+                                      </span>
+                                    </div>
+                                  </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-admin-footer></app-admin-footer>
+  
+  

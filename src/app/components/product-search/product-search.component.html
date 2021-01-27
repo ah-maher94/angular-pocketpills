@@ -1,0 +1,102 @@
+<app-header></app-header>
+<!-- Start Category Section -->
+
+
+
+<section id="list-product">
+    <div class="container">
+  
+  
+  <div class="row mt-20 mb-50 section-title text-center">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2 class="text-uppercase mt-0 line-height-1">Search result</h2>
+      <div class="title-icon">
+        <img class="mb-10" src="assets/images/title-icon.png" alt="">
+      </div>
+      <p class=""></p>
+    </div>
+  </div>
+  </div>
+  
+  
+      <div class="row">
+  
+        <div class="col-md-3">
+  
+            </div>
+  
+            <div class="col-md-9">
+  
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let product of productList;index as i">
+                        <div class="product-block">
+                          <div class="left-block">
+                            <a class="product_img_link" href="singleproduct.html" target="_blank" title="Affiliates banner 300x250">
+                              <img class="img-responsive" [src]="product['productImage']" border="0" alt="Affiliates banner 300x250" /></a>
+                            <a class="quick-view btn-tooltip" (click)="singleProduct(product['productCode'])"><i class="fa fa-eye" (click)="singleProduct(product['productCode'])"></i></a>
+                            <span class="label-new label">New</span>
+                          </div>
+                          <div class="right-block">
+                            <div class="product-meta">
+                              <h5 class="name">
+                                <a href="http://www.leotheme.com/prestashop/themes.html?wiz_id=17261" class="product-name" target="_blank">{{product['productName']}}</a>
+                              </h5>
+                              <div class="comments_note product-rating clearfix">
+                                <div class="star_content">
+                                  <div class="star"></div>
+                                  <div class="star"></div>
+                                  <div class="star"></div>
+                                  <div class="star"></div>
+                                  <div class="star"></div>
+                                </div>
+                              </div>
+                              <div class="content_price">
+                                <span class="price product-price"> {{product['productPrice']}}
+                                </span>
+                                <span class="old-price product-price"></span>
+                                <span class="price-percent-reduction">5%</span>
+                              </div>
+                              <div class="functional-buttons clearfix">
+                                <span *ngIf='clicked[i]===0;else updateQuantity '>
+                                  <a class="button ajax_add_to_cart_button"><span class="value"  (click)="addToCard($event,i)">Add to cart</span></a>
+                                </span>
+                                <ng-template #updateQuantity>
+                                  <form action="#" class="display-flex">
+                                    <div class="qtyminus">-</div>
+                                    <input type="text" name="quantity" value="1" class="qty" />
+                                    <div class="qtyplus">+</div>
+                                  </form>
+                                </ng-template>
+                                <ng-template #updateQuantity>
+                                  <form action="#" class="display-flex">
+                                    <div class="qtyminus">-</div>
+                                    <input type="text" name="quantity" value="1" class="qty" id="{{i}}" />
+                                    <div class="qtyplus">+</div>
+                                  </form>
+                                </ng-template>
+                                <a class="btn-tooltip addToWishlist"><i class="fa fa-heart"></i></a>
+                                <a (click)="getQuantity($event,i,product['productCode'],product['branchid'])" id="{{[product['productCode'],product['branchid']]}}"class="add_to_compare compare btn-tooltip"><i class="fa fa-refresh"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     
+              </div>
+  
+  
+  
+            </div>
+  
+                </div>
+  
+  
+      </div>
+  </section>
+  
+  
+  <!-- End Category Section -->
+
+  <app-footer></app-footer>
+  

@@ -1,0 +1,34 @@
+
+
+.qtyminus,
+.qtyplus {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #9B2847;
+  text-align: center;
+  font-size: 19px;
+  line-height: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+.qtyminus {
+  border-radius: 3px 0 0 3px;
+}
+.qtyplus {
+  border-radius: 0 3px 3px 0;
+}
+.qty {
+
+  width: 80px;
+  height: 30px;
+  text-align: center;
+}
+.sidebar{
+    transform: translateX(-50px);
+}
+
+.widget-sidebar{
+    background-color:#26b5cc;
+
+}

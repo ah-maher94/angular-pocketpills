@@ -1,0 +1,63 @@
+<app-nav></app-nav>
+
+<!-- end nav -->
+<div class="admin-pharmacy">
+  <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="tm-block-title d-inline-block">Add Catagory</h2>
+              </div>
+            </div>
+            <div class="row tm-edit-product-row">
+              <div class="col-xl-6 col-lg-6 col-md-12">
+                <form [formGroup]="addCategoryReactiveForm" (ngSubmit)="handleReactiveFormSubmit()" class="tm-edit-product-form">
+                  <div class="form-group mb-3">
+                    <label
+                      for="categoryName"
+                      >Catagory Name
+                    </label>
+                    <input
+                      id="name"
+                      name="categoryName"
+                      type="text"
+                      class="form-control validate"
+                      formControlName="categoryName"
+                      required
+                    />
+                    <div
+                    class="alert alert-danger"
+                    *ngIf="registerFormControl.categoryName.touched && !registerFormControl.categoryName.valid"
+                    >
+                        <div *ngIf="registerFormControl.categoryName.errors.required" style="color: red;">Category Name is required.</div>     
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Category</button>
+                  </div>
+              </form>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+              
+            <img [src]="myImage" width="400px" height="200px">
+
+            <div class="custom-file mt-3 mb-3">
+              <input id="fileInput" (change)="onChange($event)" type="file" style="display:none;" />
+              <input
+                type="button"
+                class="btn btn-primary btn-block mx-auto"
+                value="UPLOAD PRODUCT IMAGE"
+                onclick="document.getElementById('fileInput').click();"
+              />
+            </div>
+         </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<app-admin-footer></app-admin-footer>

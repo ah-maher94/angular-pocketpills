@@ -1,0 +1,375 @@
+<app-header></app-header>
+<!-- start Sign In -->
+<div class="container">
+  <div class="main signp">
+    <!-- <p >Sign in</p> -->
+    <div class="loading sign" align="center">
+      <div>S</div>
+      <div>I</div>
+      <div>G</div>
+      <div>N</div>
+      <div></div>
+      <div>U</div>
+      <div>P</div>
+    </div>
+    
+    <div class="wrongPassword">
+			<span *ngIf="error" class="btn-danger btn-sm mt-1 mb-5" align="center">{{error}}</span>
+        </div>
+        
+
+    <form
+      #registerForm=ngForm
+      class="form1"
+      [formGroup]="registerReactiveForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="form-group pb-3">
+        <input
+          class="un"
+          type="text"
+          name="userName"
+          formControlName="userName"
+          [(ngModel)]="form.userName"
+          align="center"
+          placeholder="Username"
+        />
+
+        <!-- Name Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userName.touched &&
+            !registerFormControl.userName.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userName.errors.required"
+            class="text-danger"
+          >
+            Name Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userName.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 4
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3">
+        <input
+          class="un"
+          type="email"
+          formControlName="userEmail"
+          [(ngModel)]="form.userEmail"
+          align="center"
+          placeholder="Useremail"
+        />
+        <!-- Email Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userEmail.touched &&
+            !registerFormControl.userEmail.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userEmail.errors.required"
+            class="text-danger"
+          >
+            Email Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userEmail.errors.pattern"
+            class="text-danger"
+          >
+            Input Email in this formt x@x.xx
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3">
+        <input
+          class="pass"
+          type="password"
+          align="center"
+          [(ngModel)]="form.userPassword"
+          formControlName="userPassword"
+          placeholder="Password"
+        />
+
+        <!-- Password Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userPassword.touched &&
+            !registerFormControl.userPassword.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userPassword.errors.required"
+            class="text-danger"
+          >
+            Password Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userPassword.errors.pattern"
+            class="text-danger"
+          >
+            <ul>
+              <li>At Least 6 characters</li>
+              <li>
+                Must contain at least 1 lower, 1 upper and 1 number - No special
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3">
+        <input
+          class="un"
+          type="text"
+          formControlName="userPhone"
+          [(ngModel)]="form.userPhone"
+          align="center"
+          placeholder="Userphone"
+        />
+
+        <!-- Phone Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userPhone.touched &&
+            !registerFormControl.userPhone.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userPhone.errors.required"
+            class="text-danger"
+          >
+            Phone Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userPhone.errors.pattern"
+            class="text-danger"
+          >
+            Enter valid phone number
+          </div>
+        </div>
+      </div>
+
+      <input
+        class="un"
+        type="text"
+        align="center"
+        name="userLocation"
+        formControlName="userLocation"
+        [(ngModel)]="form.userLocation"
+        placeholder="Location"
+      />
+
+      
+      <div class="form-group pb-3">
+        <h3><span class="badge badge-secondary pharmacyOwner" (click)="toggleAdmin()"> Pharmacy Owner?</span></h3>
+      </div>
+
+      <div class="form-group pb-3" *ngIf="havePharmacy">
+        <input
+          class="un"
+          type="text"
+          formControlName="pharmacyName"
+          [(ngModel)]="form.pharmacyName"
+          align="center"
+          placeholder="Pharmacy Name"
+        />
+        <!-- Pharmacy Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.pharmacyName.touched &&
+            !registerFormControl.pharmacyName.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.pharmacyName.errors.required"
+            class="text-danger"
+          >
+            Pharmacy Name Required
+          </div>
+          <div
+            *ngIf="registerFormControl.pharmacyName.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 4
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3" *ngIf="havePharmacy">
+        <input
+          class="un"
+          type="file"
+          formControlName="pharmacyPhoto"
+          align="center"
+          placeholder="Pharmacy Photo"
+          (change)="onChange($event)" 
+        />
+        <!-- Pharmacy Photo Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.pharmacyPhoto.touched &&
+            !registerFormControl.pharmacyPhoto.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.pharmacyPhoto.errors.required"
+            class="text-danger"
+          >
+            Pharmacy Photo Required
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3" *ngIf="havePharmacy">
+        <input
+          class="un"
+          type="text"
+          formControlName="PharmacyOwner"
+          [(ngModel)]="form.PharmacyOwner"
+          align="center"
+          placeholder="Pharmacy Owner"
+        />
+        <!-- Pharmacy Owner Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.PharmacyOwner.touched &&
+            !registerFormControl.PharmacyOwner.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.PharmacyOwner.errors.required"
+            class="text-danger"
+          >
+          Pharmacy Owner Required
+          </div>
+          <div
+            *ngIf="registerFormControl.PharmacyOwner.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 4
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3" *ngIf="havePharmacy">
+        <input
+          class="un"
+          type="text"
+          formControlName="branchRegion"
+          [(ngModel)]="form.branchRegion"
+          align="center"
+          placeholder="Branch Region"
+        />
+        <!-- Pharmacy Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.branchRegion.touched &&
+            !registerFormControl.branchRegion.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.branchRegion.errors.required"
+            class="text-danger"
+          >
+          Branch Region Required
+          </div>
+          <div
+            *ngIf="registerFormControl.branchRegion.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 4
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3" *ngIf="havePharmacy">
+        <input
+          class="un"
+          type="text"
+          formControlName="branchStreet"
+          [(ngModel)]="form.branchStreet"
+          align="center"
+          placeholder="Branch Street"
+        />
+        <!-- Pharmacy Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.branchStreet.touched &&
+            !registerFormControl.branchStreet.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.branchStreet.errors.required"
+            class="text-danger"
+          >
+            Branch Street Required
+          </div>
+          <div
+            *ngIf="registerFormControl.branchStreet.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 4
+          </div>
+        </div>
+      </div>
+
+
+      <button *ngIf="havePharmacy; else userRegister" 
+      class="btn btn-primary register" 
+      [disabled]="!registerForm.valid">Register</button>
+
+      <ng-template #userRegister>
+      <button class="btn btn-primary register" 
+      [disabled]="!registerFormControl.userName.valid ||
+      !registerFormControl.userEmail.valid ||
+      !registerFormControl.userPassword.valid ||
+      !registerFormControl.userPhone.valid ||
+      !registerFormControl.userLocation.valid 
+      ">Register</button>
+      </ng-template>
+
+      <ul class="loginul ftco-footer-social list-unstyled">
+        <a href="#"></a>
+        <li class="ftco-animate fadeInUp ftco-animated">
+          <a href="https://www.twitter.com/" class="mr-3">
+            <i
+              class="fa fa-twitter text-theme-colored font-40 mt-5 mr-5 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+          <a href="https://www.facebook.com/" class="mr-3">
+            <i
+              class="fa fa-facebook-official text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+          <a href="https://www.Instagram.com/">
+            <i
+              class="fa fa-instagram text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+        </li>
+      </ul>
+      <p class="signlink col-lg-12" align="center">
+        <a [routerLink]="['/login']">Sign In?</a>
+      </p>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,51 @@
+<app-header></app-header>
+	<!-- start Sign In -->
+	<div class="container">
+		<div class="main">
+			<!-- <p >Sign in</p> -->
+			<div class="loading sign" align="center">
+				<div>S</div>
+				<div>I</div>
+				<div>G</div>
+				<div>N</div>
+				<div></div>
+				<div>I</div>
+				<div>N</div>
+			</div>
+			<div class="wrongPassword">
+			<span *ngIf="error" class="btn-danger btn-sm mt-1 mb-5" align="center">{{error}}</span>
+				</div>
+			<form class="form1" #loginForm=ngForm (ngSubmit)="onSubmit()">
+				
+				<input class="un " name="userEmail" type="text" align="center" placeholder="Email" [(ngModel)]="form.userEmail" required>
+				<input class="pass" type="password" name="userPassword" align="center" placeholder="Password" [(ngModel)]="form.userPassword" required>
+				<div class="col-md-12 un radiomain"
+					style="background-color: #fff; margin-left: 13%; padding-top: 0px; padding-bottom: 0;">
+					
+				</div>
+				<button class="btn btn-primary login" [disabled]="!loginForm.valid" >Login</button>
+				<ul class="loginul ftco-footer-social list-unstyled"><a href="#"></a>
+					<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.twitter.com/" class="mr-3">
+							<i
+								class="fa fa-twitter text-theme-colored font-40 mt-5 mr-5 sm-display-block pull-left flip sm-pull-none"></i>
+						</a>
+						<a href="https://www.facebook.com/" class="mr-3">
+							<i
+								class="fa fa-facebook-official text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+						</a>
+						<a href="https://www.Instagram.com/">
+							<i
+								class="fa fa-instagram text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+						</a>
+					</li>
+				</ul>
+				<p class="signlink col-lg-12" align="center"><a [routerLink]="['/register']">Sign Up?</a></p>
+			</form>
+		</div>
+	</div>
+
+
+	<!--end Sign In -->
+
+	<app-footer></app-footer>
+

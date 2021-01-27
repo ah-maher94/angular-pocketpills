@@ -1,0 +1,109 @@
+<app-header></app-header>
+  <!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-white-8" style="background-image: url('assets/images/banners/pharmacy.jpg');">
+      <div class="container pt-60 pb-60">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="title">Pharmacies</h2>
+              <ol class="breadcrumb text-center text-black mt-10">
+                <li><a>Home</a></li>
+                <li><a>Pages</a></li>
+                <li class="active text-theme-colored">Pharmacies</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container">
+
+        <div class="section-content">
+
+          <div class="row">
+
+            <div class="">
+                <div class="sidebar sidebar-right mt-sm-30">
+              
+             
+                
+                  <div class="widget">
+                    <!-- <h4 class="widget-title">Photos from Flickr</h4> -->
+                    <div id="flickr-feed" class="clearfix">
+                      <!-- Flickr Link -->
+                      <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=52617155@N08">
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-12">
+              <div class="products">
+                <div class="row multi-row-clearfix">
+                  <div class="col-sm-6 col-md-3 col-lg-3 mb-30" *ngFor="let pharmacy of pharmacies">
+                    <div class="product">
+                      <!-- <div class="product-thumb"> <img alt="" src="assets/images/pharmacies/elezaby.png" class="img-responsive img-fullwidth"> -->
+                        <div class="product-thumb"> <img alt="" [src]="pharmacy['pharmacyImage']" class="img-responsive img-fullwidth">
+                      
+                      
+                        <div class="overlay"></div>
+                      </div>
+                      <div class="product-details text-center">
+                        <a ><h5 class="product-title">{{ pharmacy["pharmacyName"] }}
+                        </h5></a>
+                        <p>Together for Better Health </p>
+                     
+
+                         <!-- <div class="widget no-border m-0">
+                            <ul class="styled-icons icon-dark icon-circled icon-sm">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                          </div>  -->
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+            
+
+
+
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <nav>
+                      <ul class="pagination theme-colored numberList">
+                        <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">...</a></li>
+                        <li> <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+
+  <app-footer></app-footer>

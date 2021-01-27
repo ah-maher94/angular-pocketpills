@@ -1,0 +1,77 @@
+<app-nav></app-nav>
+<div class="admin-pharmacy">
+  <div class="container mt-5">
+      <div class="row tm-content-row">
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-products">
+            <div class="tm-product-table-container">
+              <table class="table table-hover tm-table-small tm-product-table">
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">&nbsp;</th> -->
+                    <th scope="col">PRODUCT NAME</th>
+                    <th scope="col">Product Code</th>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <!-- <th scope="row"><input type="checkbox" /></th> -->
+                    <td class="tm-product-name">{{product.productName}}</td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.categoryName}}</td>
+                    <td>{{product.productPrice}}</td>
+                    <td class="text-center">
+                      <a  class="tm-product-delete-link" id="deleteProduct" (click)="deleteProduct(product.productCode)">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                     
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- table container -->
+            <a
+              routerLink="/add-product"
+              class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
+  
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-product-categories">
+            <h2 class="tm-block-title">Product Categories</h2>
+            <div class="tm-product-table-container">
+              <table class="table tm-table-small tm-product-table">
+                <tbody>
+                  <tr *ngFor="let category of categories">
+                    <td class="tm-product-name">{{category.categoryName}}</td>
+                      <td class="text-center">
+                        <a href="#" class="tm-product-delete-link" id="deleteCategory" (click)="deleteCategory(category.categoryName)">
+                          <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                        </a>
+                   
+                      </td>
+                  </tr>
+          
+                </tbody>
+              </table>
+            </div>
+            <!-- table container -->
+            <a  routerLink="/add-catagory">
+              <button class="btn btn-primary btn-block text-uppercase mb-3 add-new-catagory">
+                  Add new category
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <app-admin-footer></app-admin-footer>
+    
+    
